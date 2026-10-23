@@ -1,10 +1,8 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import SectionLabel from "../components/SectionLabel";
-import EnsoMark from "../components/EnsoMark";
 import Seo from "../components/Seo";
-import { stats } from "../data/content";
+import Reveal from "../components/Reveal";
+import { stats, contactInfo } from "../data/content";
 
 export default function AboutPage() {
   return (
@@ -14,49 +12,44 @@ export default function AboutPage() {
         title="About"
         description="Enso Sphere is a digital marketing partner for brands with ambition — combining strategic thinking, creative clarity and performance marketing."
       />
-      <section className="relative bg-ink py-28 pt-40">
+      <section className="relative py-24 pt-36">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-            <div>
+          <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <Reveal>
               <SectionLabel index="02">About Enso Sphere</SectionLabel>
-              <h1 className="mt-6 font-serif-display text-4xl leading-tight text-cream sm:text-5xl">
-                We are a digital marketing
-                <br />
-                partner for brands with
-                <br />
-                ambition.
+              <h1 className="mt-6 max-w-2xl text-balance font-serif-display text-4xl leading-[1.1] text-cream sm:text-5xl">
+                We are a digital marketing partner for brands with ambition.
               </h1>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-mist">
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-mist sm:text-lg">
                 We combine strategic thinking, creative clarity and
                 performance marketing to help brands reach the right
                 audience, strengthen their visibility and grow with purpose.
               </p>
-              <Link
-                to="/work"
-                className="group mt-10 inline-flex items-center gap-2 rounded-sm border border-gold-dim px-6 py-3.5 text-xs tracking-label uppercase text-gold-light transition-colors hover:border-gold hover:bg-gold/10 focus-ring"
-              >
-                Our Story
-                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
+            </Reveal>
 
-            <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80">
-              <div className="absolute inset-0 rounded-full bg-gold/5 blur-2xl" aria-hidden="true" />
-              <EnsoMark className="h-full w-full text-gold" />
-            </div>
-          </div>
-
-          <div className="mt-20 grid grid-cols-2 gap-8 border-t border-line pt-14 sm:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center sm:text-left">
-                <p className="font-serif-display text-4xl text-gold-light sm:text-5xl">
-                  {stat.value}
-                </p>
-                <p className="mt-2 text-xs uppercase tracking-label text-mist">
-                  {stat.label}
+            <Reveal delay={60}>
+              <div className="surface lux-edge edge-glow relative rounded-2xl p-8">
+                <span className="chip">At A Glance</span>
+                <dl className="mt-6 divide-y divide-line/80">
+                  {stats.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="flex items-end justify-between gap-6 py-6 first:pt-0 last:pb-0"
+                    >
+                      <dt className="text-xs tracking-label uppercase text-mist">
+                        {stat.label}
+                      </dt>
+                      <dd className="num-lining font-serif-display text-4xl leading-none text-gold-light sm:text-5xl">
+                        {stat.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="mt-6 border-t border-line/80 pt-6 text-xs leading-relaxed text-mist">
+                  {contactInfo.markets}
                 </p>
               </div>
-            ))}
+            </Reveal>
           </div>
         </Container>
       </section>

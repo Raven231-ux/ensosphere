@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const outDir = path.join(root, "lighthouse-reports");
 
-const routes = ["/", "/about", "/services", "/approach", "/work", "/insights", "/contact"];
+const routes = ["/", "/about", "/services", "/approach", "/insights", "/contact"];
 
 const routeSlug = (route) => (route === "/" ? "home" : route.replace(/\//g, ""));
 

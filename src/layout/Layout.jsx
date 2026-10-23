@@ -5,10 +5,10 @@ import ScrollToTop from "../components/ScrollToTop";
 
 export default function Layout() {
   return (
-    <div className="min-h-screen bg-ink">
+    <div className="flex min-h-screen flex-col">
       <ScrollToTop />
       <Nav />
-      <main>
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />

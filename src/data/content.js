@@ -2,15 +2,14 @@ export const nav = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Approach", href: "/approach" },
-  { label: "Work", href: "/work" },
   { label: "Insights", href: "/insights" },
 ];
 
 export const socials = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/michaelaluyt/",
-    handle: "linkedin.com/in/michaelaluyt",
+    href: "https://www.linkedin.com/company/ensosphere/",
+    handle: "linkedin.com/company/ensosphere",
   },
   {
     label: "Instagram",
@@ -31,6 +30,8 @@ export const socials = [
 
 export const contactInfo = {
   email: "hello@enso-sphere.online",
+  phone: "+27 81 552 8045",
+  phoneHref: "+27815528045",
   location: "South Africa",
   markets: "Working across South Africa, the UK, UAE, United States and Australia.",
 };
@@ -38,8 +39,6 @@ export const contactInfo = {
 export const stats = [
   { value: "166", label: "Clients Supported" },
   { value: "21", label: "Industries" },
-  { value: "3", label: "Core Growth Channels" },
-  { value: "100%", label: "Senior-Led Strategy" },
 ];
 
 export const expertise = [
@@ -129,31 +128,11 @@ export const approach = [
     title: "Optimise",
     description: "We measure, learn and refine continuously to improve performance and support growth.",
   },
-];
-
-export const workFilters = ["All", "PPC", "SEO", "Social Media"];
-
-export const work = [
   {
-    client: "Retail E-commerce",
-    tag: "PPC",
-    channel: "Google Ads",
-    metric: "+2,020%",
-    metricLabel: "Return on Investment",
-  },
-  {
-    client: "Paint & Interiors",
-    tag: "PPC",
-    channel: "Google Ads",
-    metric: "777",
-    metricLabel: "Conversions at R7.62 each",
-  },
-  {
-    client: "Home Improvement",
-    tag: "PPC",
-    channel: "Google Ads",
-    metric: "47",
-    metricLabel: "Conversions at £62.77 each",
+    step: "05",
+    title: "Growth",
+    description:
+      "We scale what works and build on proven results to drive sustainable, measurable business growth.",
   },
 ];
 

@@ -21,11 +21,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.enso-sphere.online/work</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.enso-sphere.online/insights</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
